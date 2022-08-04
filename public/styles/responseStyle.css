@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+ul {
+  margin-top: 5rem;
+  list-style: none;
+}
+li h4,
+li p,
+li span,
+li a {
+  margin-left: 20px;
+}
+li a {
+  color: rgb(204, 255, 0);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 2px;
+  border-radius: 2px;
+}
+li a:hover {
+  color: black;
+  background-color: rgb(204, 255, 0);
+}
+li {
+  font-family: "Roboto Mono", monospace;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(27, 27, 50, 0.8);
+  width: 40vw;
+  margin-left: 25vw;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+.entry {
+  display: flex;
+  padding: 0px;
+}
+.entry div {
+  text-align: center;
+  border: 1px solid gray;
+  width: 16rem;
+  overflow: auto;
+}
+input {
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 20rem;
+}
+.delete2 {
+  margin-left: 74%;
+}

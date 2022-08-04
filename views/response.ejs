@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/responseStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="./script2.js" type="module"></script>
+    <ul class="entries">
+      <% for(const response of allResponses){ %>
+      <li>
+        <span class="rating">
+          <% for(let i=0;i<response.rating;i++){ %>
+<i class="material-icons" id="star">star</i
+          >
+            <% } %>  
+        </span>
+        <h4><%= response.name %>  | <%= response.date.toLocaleString() %></h4>
+        <h4>Email-ID: <%= response.email %></h4>
+        <h4>Age:<%= response.age %></h4>
+        <p>Current Role: <%= response.role %></p>
+        <p>Service Used: <%= response.feature %></p>
+        <p>Comments/Suggestions: <%= response.suggestions %></p>
+        <a href="/responses/<%= response.id%>/edit">Edit</a><a href="/responses/<%= response.id%>/delete">Delete</a>
+      </li>
+      <% } %>
+      
+    </ul>
+  </body>
+</html>

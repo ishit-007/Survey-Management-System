@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles/stylesheet.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Survey Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-image: url("https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?cs=srgb&dl=pexels-carlos-oliva-3586966.jpg&fm=jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      #headings {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+      }
+      #mainHeading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: rgb(255, 247, 0);
+      }
+      #subHeading {
+        color: rgb(255, 247, 0);
+        font-size: 1.125rem;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+      #content1 {
+        width: 95%;
+        margin: auto;
+      }
+      form {
+        width: 84%;
+        height: 100%;
+        color: #fff;
+        padding-top: 35px;
+        /* padding-bottom: 120px; */
+        border-radius: 5px;
+        background-color: rgb(27, 27, 50, 0.8);
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 100px;
+      }
+      form .box,
+      select {
+        padding: 4px;
+        width: 95%;
+        height: 2.375rem;
+        position: relative;
+        bottom: 10px;
+        border: 0;
+        border-radius: 5px;
+      }
+      .radiooptions {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .radiooption {
+        color: blue;
+        margin-left: 70px;
+        margin-right: 15px;
+      }
+      #suggestions {
+        width: 95%;
+        height: 100px;
+      }
+      button {
+        background-color: #37af65;
+        color: #fff;
+        width: 95%;
+        height: 40px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+      }
+      .share {
+        text-align: right;
+        margin-right: 60px;
+      }
+      .share a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="scripts/script.js"></script>
+    <div id="headings">
+      <h1 id="mainHeading">FlyBuddy Survey 2022</h1>
+      <h2 id="subHeading">
+        Thank you for taking the time to help us improve the platform
+      </h2>
+    </div>
+
+    <form action="/store-response" method="post">
+      <div class="share">
+        <a href="/survey/publish">
+          <i class="material-icons">share</i>
+        </a>
+      </div>
+
+      <div id="content1">
+        <label>Name</label><br /><br />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          class="box"
+          name="name"
+          id="nameBox"
+          required
+        /><br /><br />
+
+        <label>Email</label><br /><br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your Email"
+          class="box"
+          id="emailBox"
+          required
+        /><br /><br />
+
+        <label>Age</label><br /><br />
+        <input
+          required
+          name="age"
+          type="number"
+          placeholder="Age"
+          class="box"
+          id="ageBox"
+        /><br /><br />
+
+        <label>Which option best describes your current role?</label
+        ><br /><br />
+        <div id="option1">
+          <select id="currentRole" name="role" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option value="Student-Sr Secondary">Student-Sr Secondary</option>
+            <option value="Student-Undergrad">Student-Undergrad</option>
+            <option value="Student-Postgrad">Student-Postgrad</option>
+            <option value="Full Time Job">Full Time Job</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <br />
+        <label>How would you rate our Android App?</label><br /><br />
+        <div class="radiooptions">
+          <input
+            class="radiooption"
+            type="radio"
+            name="recommendation"
+            value="1"
+            required
+          />1
+          <input
+            class="radiooption"
+            type="radio"
+            name="recommendation"
+            value="2"
+          />2
+          <input
+            class="radiooption"
+            type="radio"
+            name="recommendation"
+            value="3"
+          />3
+          <input
+            class="radiooption"
+            type="radio"
+            name="recommendation"
+            value="4"
+          />4
+          <input
+            class="radiooption"
+            type="radio"
+            name="recommendation"
+            value="5"
+          />5
+        </div>
+        <br /><br />
+
+        <label>What are you using FlyBuddy Andoid App for?</label><br /><br />
+        <div id="option2">
+          <select id="favFeature" name="feature" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option value="SAT">SAT</option>
+            <option value="ACT">ACT</option>
+            <option value="IELTS">IELTS</option>
+            <option value="TOEFL">TOEFL</option>
+            <option value="GRE">GRE</option>
+            <option value="GMAT">GMAT</option>
+            <option value="Visa Assistance">Visa Assistance</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <br /><br />
+        <!--  -->
+        <label>Any comments or suggestions?</label><br /><br />
+        <textarea
+          required
+          name="suggestions"
+          id="suggestions"
+          placeholder="Enter your comment here..."
+        ></textarea
+        ><br />
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

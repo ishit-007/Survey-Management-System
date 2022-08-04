@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#headings {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+#mainHeading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: aqua;
+}
+#subHeading {
+  color: aqua;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#content1 {
+  width: 95%;
+  margin: auto;
+}
+form {
+  width: 54%;
+  height: 100%;
+  color: #fff;
+  padding-top: 35px;
+  /* padding-bottom: 120px; */
+  border-radius: 5px;
+  background-color: rgb(27, 27, 50, 0.8);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+form .box,
+select {
+  padding: 4px;
+  width: 95%;
+  height: 2.375rem;
+  position: relative;
+  bottom: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+.radiooptions {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radiooption {
+  color: blue;
+  margin-left: 70px;
+  margin-right: 15px;
+}
+#suggestions {
+  width: 95%;
+  height: 100px;
+}
+button {
+  background-color: #37af65;
+  color: #fff;
+  width: 95%;
+  height: 40px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.share {
+  text-align: right;
+  margin-right: 60px;
+}
+.share a{
+  color: white;
+}

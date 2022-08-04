@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/loginSignupStyle.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/login" method="post">
+        <div class="login">
+          <h1>Login</h1>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="loginID"
+            name="loginID"
+          /><br />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            class="loginPwd"
+            name="loginPwd"
+          /><br />
+          <button class="loginBtn">Submit</button>
+        </div>
+      </form>
+
+      <form action="/signup" method="post">
+        <div class="registration">
+          <h1>Sign-Up</h1>
+          <input
+            type="email"
+            placeholder="Enter new Email"
+            class="newuserID"
+            name="signupID"
+          /><br />
+          <input
+            type="password"
+            placeholder="Create Password"
+            class="newPwd"
+            name="signupPassword"
+          /><br />
+          <button class="registerBtn">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="container"></div> -->
+  </body>
+</html>

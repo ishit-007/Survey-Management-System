@@ -1,0 +1,26 @@
+*{
+  background-color: black;
+  margin: 0;
+}
+.buttons {
+  /* border: 1px solid white; */
+  position: relative;
+  top: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: #37af65;
+  color: white;
+  height: 10vh;
+  /* margin: auto; */
+  width: 40vw;
+  font-weight: 900;
+  font-size: xx-large;
+}
+#particles-js {
+  background: black;
+  height: 100%;
+  width: 100%;
+}

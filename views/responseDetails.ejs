@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/responseDetails.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form action="/responses/<%= thisResponse[0].id%>/update" method="post">
+      <input
+        type="text"
+        name="name"
+        value="<%= thisResponse[0].name %>"
+        placeholder="Enter your Name"
+      /><br />
+      <input
+        type="number"
+        name="age"
+        value="<%= thisResponse[0].age %>"
+        placeholder="Enter your Age"
+      /><br />
+      <input
+        type="email"
+        name="email"
+        value="<%= thisResponse[0].email%>"
+        placeholder="Enter your Email"
+      /><br />
+      <select id="currentRole" name="role" required>
+        <option value="" disabled selected>Select your Current Role</option>
+        <option value="Student-Sr Secondary">Student-Sr Secondary</option>
+        <option value="Student-Undergrad">Student-Undergrad</option>
+        <option value="Student-Postgrad">Student-Postgrad</option>
+        <option value="Full Time Job">Full Time Job</option>
+        <option value="Other">Other</option></select
+      ><br />
+
+      <select id="favFeature" name="feature" required>
+        <option value="" disabled selected>
+          Select the FlyBuddy's servie which you use the most?
+        </option>
+        <option value="SAT">SAT</option>
+        <option value="ACT">ACT</option>
+        <option value="IELTS">IELTS</option>
+        <option value="TOEFL">TOEFL</option>
+        <option value="GRE">GRE</option>
+        <option value="GMAT">GMAT</option>
+        <option value="Visa Assistance">Visa Assistance</option>
+        <option value="Other">Other</option></select
+      ><br />
+
+      <textarea
+        required
+        name="suggestions"
+        id="suggestions"
+        placeholder="Enter your comment here..."
+      >
+<%= thisResponse[0].suggestions%>
+        </textarea
+      ><br />
+      <label>Rate Our App:</label><br />
+      <div class="radio">
+        <% for(let i=1;i<=5;i++){ %>
+        <input
+          class="radiooption"
+          type="radio"
+          name="recommendation"
+          value="<%= i%>"
+        /><%= i %> <% } %>
+      </div>
+      <button>Update</button>
+    </form>
+  </body>
+</html>
